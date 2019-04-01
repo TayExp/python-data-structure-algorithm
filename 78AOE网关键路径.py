@@ -44,6 +44,7 @@ def toposort(graph):
     for vi in range(vnum):
         for v,w in graph.out_edges(vi):
             indegree[v] += 1
+    for vi in range(vnum):
         if indegree[vi] == 0: # 初始0度表
             indegree[vi] = zerov
             zerov = vi
